@@ -29,4 +29,4 @@
 
 # urls.py에서 url patterns 에서 현재 url 기준으로 route에 해당하는 원소가 오면  뒤에 있는 파일로 유도를 하는 방식이다.
 
-# spring의 request mapping과 유사하다고 할 수 있음
+# spring의 request mapping과 유사함
