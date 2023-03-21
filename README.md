@@ -37,6 +37,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
 * url patterns 에서 현재 url 기준으로 route에 해당하는 원소가 오면 뒤에 있는 파일로 유도를 하는 방식이다.
 * spring의 request mapping과 유사함. 단 root 폴더에 존재하는 admin은 예외이다.
+* urls 에서 name 파라미터의 쓰임새는 다음과 같다. 쉽게 말해서 view에서 역으로 url을 참조 가능하다. [링크](https://stackoverflow.com/questions/12818377/django-name-parameter-in-urlpatterns)
+* 앱이 하나라면 괜찮지만 앱이 여러 개가 되면 url 이름이 헷갈리기 때문에 app_name이라는 것을 정의 해줘야 한다.  
 
 ### admin.py
 
@@ -44,6 +46,11 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 ~~~python
 admin.site.register(객체)
 ~~~
+
+### views.py
+
+* httpresponse 객체를 브라우저에 돌려주는 역할을 한다.
+* render함수는 html을 받고, 해당하는 인자를 받아서 return한다.
 
 ### migration
 
@@ -59,3 +66,9 @@ admin.site.register(객체)
 *  datatime now 보다는 timezone.now를 사용하는 것이 좋다. [timezone aware하게 datetime을 return 한다.](https://stackoverflow.com/questions/26949959/timezone-now-vs-datetime-datetime-now)
 * 
 
+### 의문점
+
+* 분명히 api를 restful하게 만들기 위해서는 뒤에 슬래시(/) 를 붙이지 않는 것이 규칙인다.
+* 하지만 장고 공식 문서는 다음과 뒤에 슬래시(/)를 붙이고 있음 이유를 알고 싶음
+* 왜 붙이면 안되는지는 [링크](https://yozm.wishket.com/magazine/detail/1347/) 에 나와 있음
+* 스프링 취약점이어서 장고에는 상관이 없다는 이유에서 나온 코드인지 궁금함
