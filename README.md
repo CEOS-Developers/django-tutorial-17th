@@ -51,6 +51,7 @@ admin.site.register(객체)
 
 * httpresponse 객체를 브라우저에 돌려주는 역할을 한다.
 * render함수는 html을 받고, 해당하는 인자를 받아서 return한다.
+* 제너릭 뷰 [링크](https://ivans-story.tistory.com/91)
 
 ### migration
 
@@ -58,13 +59,17 @@ admin.site.register(객체)
 * makemigrations는 장고에게 알려주고, migrate가 실질적으로 migration이 적용된다.
 * commit과 push의 관계를 생각하면 쉬울 것 같다.
 
+### 제너릭 뷰
+
+
 
 ### 기타
 
 * 개발 서버는 요청이 들어올 때마다 자동으로 python 코드를 읽고 상태를 바꾸지만, 파일에 따라서 다르다.
 * 고로 수정사항이 생기면 서버를 재가동하는 것이 정신건강에 좋다. 
-*  datatime now 보다는 timezone.now를 사용하는 것이 좋다. [timezone aware하게 datetime을 return 한다.](https://stackoverflow.com/questions/26949959/timezone-now-vs-datetime-datetime-now)
-* 
+* datatime now 보다는 timezone.now를 사용하는 것이 좋다. [timezone aware하게 datetime을 return 한다.](https://stackoverflow.com/questions/26949959/timezone-now-vs-datetime-datetime-now)
+* post 명령을 수행할 때는 csrf token을 생성 해야한다.
+* post data를 다루고 난 이후에는 HttpResponseRedirect 함수를 실행해야 한다.
 
 ### 의문점
 
