@@ -8,7 +8,9 @@
 - Project: a collection of configuration and apps for a particular website
 
 > Project 
-> >Apps
+> > App
+> 
+> > App
 
 ### Command for Creating an app
 > python manage.py startapp polls
@@ -25,3 +27,31 @@
 - (옵셔널) 이 이름은 해당 URL을 참조할 때 사용되며, 코드의 가독성과 유지 보수성을 높일 수 있음.
 - reverse('index') 함수를 사용하여 views.index 함수에 해당하는 URL을 생성.
 
+# 2장
+
+### Database
+- MySQL을 사용하였다.
+- 애플 실리콘의 경우 추가적 설정이 필요하다 !!
+> pip install pymysql
+
+pymysql을 설치해주는 명령어
+> import pymysql  
+pymysql.install_as_MySQLdb()
+
+setting.py 에 상기 코드를 추가해준다.
+
+### Database - Flow
+
+- polls/models.py에서 모델을 만든다
+- mysite/settings.py -> INSTALLED_APPS 에 PollsConfig을 등록한다
+> $ python manage.py makemigrations polls
+> 
+> $ python manage.py sqlmigrate polls 0001
+> 
+> $ python manage.py migrate
+- 이렇게 migrate 하면 데이터베이스에 등록된다
+
+### 2장 느낀점..?
+
+- /admin 페이지에서 관리하는거 쉽고 좋네요
+- 전체적으로 코드들이 시원시원하니 직관적이네요
