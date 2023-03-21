@@ -71,7 +71,7 @@ admin.site.register(객체)
 * post 명령을 수행할 때는 csrf token을 생성 해야한다.
 * post data를 다루고 난 이후에는 HttpResponseRedirect 함수를 실행해야 한다.
 * 객체에서 자신을 참조하는(자신을 외래키로 가지고 있는) 객체에 접근하기 위해서 (객체이름)_set 으로 접근한다.
-* manage.py shell은 실시간으로 필드 값이 반영되지 않는다. 페이지에서 객체를 수정해도 종료
+* manage.py shell은 실시간으로 필드 값이 반영되지 않는다. 페이지에서 객체를 수정했다면 shell을 종료하고 재접속해야 필드 값 업데이트가 반영이 되는 것으로 보임
 
 ### 의문점
 
