@@ -112,3 +112,4 @@ class DetailView(generic.DetailView):
 - detail.html에서 index.html로 가는 버튼 추가했다. 왔다갔다 하기 귀찮음
 - 투표가 마이너스가 되면 안되니까 intergerfield를 positiveinterfield로 바꿔줬다.
 - 다른 데이터베이스 사용해보고싶었는데 보안때문에 .env파일 생성하고 이것저것 하다보니 너무 복잡해졌다. postgresql을 사용하려했는데 연결이 계속 안된다. 왤까...좀 더 찾아보고 다시 시도해봐야 될거같다..
+- 아...중간에 뭘 잘못눌러서 깃 연결이 이상해졌다...깃 너무 어려워
