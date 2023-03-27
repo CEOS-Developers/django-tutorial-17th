@@ -39,7 +39,7 @@ ___
 > $ pip install pymysql
 
 pymysql을 설치해주는 명령어
-``` 
+``` python
 import pymysql  
 pymysql.install_as_MySQLdb()
 ```
