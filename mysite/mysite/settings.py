@@ -9,6 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+# os와 environ을 import
+import os
+import pymysql
+import environ
 
 from pathlib import Path
 
@@ -19,11 +23,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+# 환경변수르 불러올 수 있는 상태로 세팅
+env = environ.Env(DEBUG=(bool, True))
+
+# 어떤 파일에서 불러올 건지 정해주기
+environ.Env.read_env(
+    env_file=os.path.join(BASE_DIR, '.env')
+)
+
+pymysql.install_as_MySQLdb()
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&q0_9o#*ewjak2mn*z6bo=12^j@7np-$n3x5d@2wd-qd+ipv4o'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -104,9 +118,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-KR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
