@@ -13,3 +13,7 @@
 
 ## 기한
 - 2023년 3월 25일 토요일  
+
+## 과제
+- [ch1-ch4 클릭](https://jwkdevelop.tistory.com/62)
+- [git 공부 및 느낀점](https://jwkdevelop.tistory.com/63)
