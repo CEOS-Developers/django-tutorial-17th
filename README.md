@@ -12,4 +12,9 @@
 - Django 의 MTV 패턴을 이해합니다.
 
 ## 기한
-- 2023년 3월 25일 토요일  
+- 2023년 3월 25일 토요일
+
+## 미션 정리
+
+차근차근 따라하면서 velog에 과정을 정리해보았습니다
+(https://velog.io/@haen/CEOS-1%EC%A3%BC%EC%B0%A8-%EB%AF%B8%EC%85%98-Django-Tutorial)
